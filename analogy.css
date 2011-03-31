@@ -1,0 +1,44 @@
+/* tests */
+
+.test_suite {
+  background:#fff;
+  height:300px;
+  overflow:auto;
+  position:absolute;
+  bottom:0px;
+  width:100%;
+}
+
+.test_suite .success {
+  border-left:5px solid #0f0;
+  color:#080;
+}
+
+.test_suite div {
+  margin:2px 0;
+  padding:0 5px;
+}
+
+.test_suite .failure {
+  color:#800;
+  border-left:5px solid #f00;
+}
+
+.test_suite .error {
+  color:#f00;
+  border-left:5px solid #f00;
+}
+
+.test_suite .error p {
+  margin:0;
+}
+
+.test_suite .error p.message {
+  font-weight:bold;
+}
+.test_suite .error p.stack {
+  margin-left:30px;
+  padding-left:30px;
+  text-indent:-30px;
+  border-bottom:1px dotted #f00;
+}
