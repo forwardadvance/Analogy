@@ -1,4 +1,4 @@
-analogy.tests = {
+analogy = {
   unit: [],
   init: function() {
     $("body").append("<div class='test_suite'>Tests</div>");
@@ -35,16 +35,23 @@ analogy.tests = {
     }
     analogy.tests.cleanup_test(fnc);
   },
+  output_success: function
   initialise_test: function(fnc) {
     analogy.tests.stored_html = $("body").html();
     if (fnc.init) {
       fnc.init();
     }
+    results = [];
+    failures = [];
   },
   /* Clean up after a test */
   cleanup_test: function(fnc) {
     var test_html = $(".test_suite").html();
     $("body").html(analogy.tests.stored_html);
     $(".test_suite").html(test_html);
+  },
+  assert: function(fnc) {
+    var result = fnc();
+    return;
   }
 }
