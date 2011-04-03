@@ -41,6 +41,7 @@ analogy = {
     if (fnc.init) {
       fnc.init();
     }
+    assertions = [];
     results = [];
     failures = [];
   },
@@ -53,5 +54,15 @@ analogy = {
   assert: function(fnc) {
     var result = fnc();
     return;
+  },
+  /* Tests */
+  assert_text_exists: function(string) {
+    if (!window.find(string)) {
+      
+      return false
+    } else {
+      return true
+    }
+    
   }
 }
